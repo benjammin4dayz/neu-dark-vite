@@ -1,0 +1,22 @@
+{
+  "name": "neu-dark-vite",
+  "repository": "https://github.com/benjammin4dayz/neu-dark-vite",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "dark-src"
+  ],
+  "scripts": {
+    "build": "neu build",
+    "build:release": "neu build --release",
+    "clean": "npm run clean:neu -s && npm run clean:dark -s",
+    "clean:neu": "rm -rf dist/ bin/ node_modules/",
+    "clean:dark": "cd dark-src && rm -rf dist/ node_modules/",
+    "lint": "npm run lint --workspaces --if-present",
+    "setup": "npm ci && neu update",
+    "start": "neu run -- --window-enable-inspector"
+  },
+  "devDependencies": {
+    "@neutralinojs/neu": "^11.0.1"
+  }
+}

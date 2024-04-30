@@ -1,0 +1,46 @@
+{
+  "applicationId": "neu.dark.vite",
+  "version": "0.1.0",
+  "defaultMode": "window",
+  "documentRoot": "/dark-src/dist/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "nativeAllowList": ["app.*"],
+  "logging": {
+    "enabled": true,
+    "writeToLogFile": true
+  },
+  "modes": {
+    "window": {
+      "title": "Neu-Dark-Vite App",
+      "width": 800,
+      "height": 500,
+      "minWidth": 400,
+      "minHeight": 200,
+      "fullScreen": false,
+      "icon": "/dark-src/public/favicon.ico",
+      "alwaysOnTop": false,
+      "enableInspector": false,
+      "borderless": false,
+      "maximize": false,
+      "resizable": true,
+      "hidden": false,
+      "useSavedState": false,
+      "exitProcessOnClose": true
+    }
+  },
+  "cli": {
+    "binaryName": "neu-dark-vite",
+    "resourcesPath": "/dark-src/dist/",
+    "extensionsPath": "/extensions/",
+    "frontendLibrary": {
+      "patchFile": "/dark-src/index.html",
+      "devUrl": "http://localhost:3000",
+      "projectPath": "/dark-src/",
+      "initCommand": "cd .. && npm ci",
+      "devCommand": "npm run dev",
+      "buildCommand": "npm run build"
+    }
+  }
+}
